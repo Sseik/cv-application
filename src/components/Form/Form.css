@@ -1,0 +1,45 @@
+.form {
+  padding: 8px;
+  border-right: 1px solid blue;
+  min-height: 100vh;
+
+  section {
+    border-top: 1px solid blue;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    &:last-of-type {
+      border-bottom: 1px solid blue;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label:not(:first-of-type) {
+        margin-top: 0.5rem;
+      }
+
+      label {
+        margin-bottom: 0.25rem;
+      }
+
+      input:last-of-type {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  button,
+  input[type="submit"] {
+    margin-top: 0.5rem;
+    padding: 8px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+}
