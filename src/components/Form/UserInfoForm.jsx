@@ -1,29 +1,16 @@
 import { useState } from "react";
 
-function UserInfoForm({
-  initialFirstName,
-  initialLastName,
-  initialEmail,
-  initialPhoneNumber,
-  changeFirstName,
-  changeLastName,
-  changeEmail,
-  changePhoneNumber,
-  hide,
-}) {
-  const [firstName, setFirstName] = useState(initialFirstName);
-  const [lastName, setLastName] = useState(initialLastName);
-  const [email, setEmail] = useState(initialEmail);
-  const [phoneNumber, setPhoneNumber] = useState(initialPhoneNumber);
+function UserInfoForm({ userInfo, changeUserInfo, hide }) {
+  const [firstName, setFirstName] = useState(userInfo.firstName);
+  const [lastName, setLastName] = useState(userInfo.lastName);
+  const [email, setEmail] = useState(userInfo.email);
+  const [phoneNumber, setPhoneNumber] = useState(userInfo.phoneNumber);
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        changeFirstName(firstName);
-        changeLastName(lastName);
-        changeEmail(email);
-        changePhoneNumber(phoneNumber);
+        changeUserInfo({ firstName, lastName, email, phoneNumber });
         hide();
       }}
     >
@@ -55,7 +42,9 @@ function UserInfoForm({
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
       />
-      <button onClick={() => hide()}>Cancel</button>
+      <button type="button" onClick={hide}>
+        Cancel
+      </button>
       <button type="submit">Submit</button>
     </form>
   );

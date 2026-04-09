@@ -2,18 +2,12 @@ import { useState } from "react";
 import UserInfo from "./UserInfo";
 import UserInfoForm from "./UserInfoForm";
 import "./Form.css";
+import EducationInfoForm from "./EducationInfoForm";
+import EducationInfo from "./EducationInfo";
 
-function Form({
-  firstName,
-  lastName,
-  email,
-  phoneNumber,
-  changeFirstName,
-  changeLastName,
-  changeEmail,
-  changePhoneNumber,
-}) {
+function Form({ userInfo, changeUserInfo, educations, changeEducations }) {
   const [userFormVisible, setUserFormVisible] = useState(true);
+  const [educationFormVisible, setEducationFormVisible] = useState(true);
 
   return (
     <section className="form">
@@ -22,25 +16,34 @@ function Form({
         <h3>User Info</h3>
         {userFormVisible ? (
           <UserInfoForm
-            initialFirstName={firstName}
-            initialLastName={lastName}
-            initialEmail={email}
-            initialPhoneNumber={phoneNumber}
-            changeFirstName={changeFirstName}
-            changeLastName={changeLastName}
-            changeEmail={changeEmail}
-            changePhoneNumber={changePhoneNumber}
+            userInfo={userInfo}
+            changeUserInfo={changeUserInfo}
             hide={() => setUserFormVisible(false)}
           />
         ) : (
           <>
             <UserInfo
-              firstName={firstName}
-              lastName={lastName}
-              email={email}
-              phoneNumber={phoneNumber}
+              firstName={userInfo.firstName}
+              lastName={userInfo.lastName}
+              email={userInfo.email}
+              phoneNumber={userInfo.phoneNumber}
             />
             <button onClick={() => setUserFormVisible(true)}>Edit</button>
+          </>
+        )}
+      </section>
+      <section className="educations">
+        <h3>Education</h3>
+        {educationFormVisible ? (
+          <EducationInfoForm
+            initialEducations={educations}
+            changeEducations={changeEducations}
+            hide={() => setEducationFormVisible(false)}
+          />
+        ) : (
+          <>
+            <EducationInfo educations={educations} />
+            <button onClick={() => setEducationFormVisible(true)}>Edit</button>
           </>
         )}
       </section>

@@ -2,6 +2,7 @@
   padding: 8px;
   border-right: 1px solid blue;
   min-height: 100vh;
+  overflow-y: scroll;
 
   section {
     border-top: 1px solid blue;
@@ -14,7 +15,8 @@
       border-bottom: 1px solid blue;
     }
 
-    form {
+    form,
+    form .education {
       display: flex;
       flex-direction: column;
 
@@ -28,6 +30,22 @@
 
       input:last-of-type {
         margin-bottom: 0.25rem;
+      }
+
+      & .education {
+        border: 1px solid blue;
+        padding: 8px;
+        border-radius: 6px;
+
+        &:not(:first-of-type) {
+          margin-top: 0.5rem;
+        }
+
+        button {
+          border: 1px solid darkblue;
+          background: white;
+          color: blue;
+        }
       }
     }
   }

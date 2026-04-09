@@ -3,22 +3,21 @@ import Form from "./components/Form/Form";
 import "./App.css";
 
 function App() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [userInfo, setUserInfo] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
+  const [educations, setEducations] = useState(null);
 
   return (
     <>
       <Form
-        firstName={firstName}
-        lastName={lastName}
-        email={email}
-        phoneNumber={phoneNumber}
-        changeFirstName={setFirstName}
-        changeLastName={setLastName}
-        changeEmail={setEmail}
-        changePhoneNumber={setPhoneNumber}
+        userInfo={userInfo}
+        changeUserInfo={setUserInfo}
+        educations={educations}
+        changeEducations={setEducations}
       ></Form>
     </>
   );
