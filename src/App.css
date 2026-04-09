@@ -7,3 +7,12 @@
 h2 {
   margin-bottom: 1rem;
 }
+
+button:hover {
+    opacity: 0.8;;
+  box-shadow: 2px 2px 4px black;
+}
+
+button:active {
+  font-size: 0.9em;
+}
