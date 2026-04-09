@@ -19,6 +19,7 @@ function Form({
     <section className="form">
       <h2>Form</h2>
       <section className="user-info">
+        <h3>User Info</h3>
         {userFormVisible ? (
           <UserInfoForm
             initialFirstName={firstName}

@@ -2,3 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
+
+h2 {
+  margin-bottom: 1rem;
+}
