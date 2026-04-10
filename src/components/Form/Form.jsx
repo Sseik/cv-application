@@ -5,7 +5,12 @@ import "./Form.css";
 import EducationInfoForm from "./EducationInfoForm";
 import EducationInfo from "./EducationInfo";
 
-function Form({ userInfo, changeUserInfo, educations, changeEducations }) {
+function Form({
+  userInfo,
+  changeUserInfo,
+  educations,
+  changeEducations,
+}) {
   const [userFormVisible, setUserFormVisible] = useState(true);
   const [educationFormVisible, setEducationFormVisible] = useState(true);
 

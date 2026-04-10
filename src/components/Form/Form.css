@@ -32,7 +32,8 @@
         margin-bottom: 0.25rem;
       }
 
-      & .education {
+      & .education,
+      & .position {
         border: 1px solid blue;
         padding: 8px;
         border-radius: 6px;
