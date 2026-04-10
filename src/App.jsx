@@ -9,7 +9,7 @@ function App() {
     email: "",
     phoneNumber: "",
   });
-  const [educations, setEducations] = useState(null);
+  const [educations, setEducations] = useState([]);
 
   return (
     <>

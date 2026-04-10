@@ -2,16 +2,7 @@ import { useState } from "react";
 
 function EducationInfoForm({ initialEducations, changeEducations, hide }) {
   const [educations, setEducations] = useState(
-    initialEducations
-      ? initialEducations.map((ed) => ({ ...ed }))
-      : [
-          {
-            id: crypto.randomUUID(),
-            title: "",
-            school: "",
-            graduationDate: null,
-          },
-        ],
+    initialEducations.map((ed) => ({ ...ed })),
   );
 
   return (
@@ -50,7 +41,7 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
           <input
             id="graduation-date"
             type="date"
-            value={education.graduationDate ?? ""}
+            value={education.graduationDate}
             onChange={(e) => {
               const educationsCopy = educations.map((ed) => ({ ...ed }));
               educationsCopy[index].graduationDate = e.target.value;
@@ -103,7 +94,7 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
                 id: crypto.randomUUID(),
                 title: "",
                 school: "",
-                graduationDate: null,
+                graduationDate: "",
               }),
           );
         }}
