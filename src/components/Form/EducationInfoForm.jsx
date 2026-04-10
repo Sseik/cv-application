@@ -15,9 +15,9 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
     >
       {educations.map((education, index) => (
         <div key={education.id} className="education">
-          <label htmlFor="study">Study:</label>
+          <label htmlFor={`study${index}`}>Study:</label>
           <input
-            id="study"
+            id={`study${index}`}
             type="text"
             value={education.title}
             onChange={(e) => {
@@ -26,9 +26,9 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
               setEducations(educationsCopy);
             }}
           />
-          <label htmlFor="school">School:</label>
+          <label htmlFor={`school${index}`}>School:</label>
           <input
-            id="school"
+            id={`school${index}`}
             type="text"
             value={education.school}
             onChange={(e) => {
@@ -37,9 +37,9 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
               setEducations(educationsCopy);
             }}
           />
-          <label htmlFor="graduation-date">Graduation Date:</label>
+          <label htmlFor={`graduation-date${index}`}>Graduation Date:</label>
           <input
-            id="graduation-date"
+            id={`graduation-date${index}`}
             type="date"
             value={education.graduationDate}
             onChange={(e) => {
