@@ -29,7 +29,8 @@ function FormSection({
 
   return (
     <form
-      onSubmit={() => {
+      onSubmit={(e) => {
+        e.preventDefault();
         changeState(state);
         hide();
       }}

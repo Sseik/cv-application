@@ -10,6 +10,7 @@ function App() {
     phoneNumber: "",
   });
   const [educations, setEducations] = useState([]);
+  const [experience, setExperience] = useState([]);
 
   return (
     <>
@@ -18,6 +19,8 @@ function App() {
         changeUserInfo={setUserInfo}
         educations={educations}
         changeEducations={setEducations}
+        experience={experience}
+        changeExperience={setExperience}
       ></Form>
     </>
   );
