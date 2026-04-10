@@ -26,6 +26,7 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
         <div key={education.id} className="education">
           <label htmlFor="study">Study:</label>
           <input
+            id="study"
             type="text"
             value={education.title}
             onChange={(e) => {
@@ -36,6 +37,7 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
           />
           <label htmlFor="school">School:</label>
           <input
+            id="school"
             type="text"
             value={education.school}
             onChange={(e) => {
@@ -46,6 +48,7 @@ function EducationInfoForm({ initialEducations, changeEducations, hide }) {
           />
           <label htmlFor="graduation-date">Graduation Date:</label>
           <input
+            id="graduation-date"
             type="date"
             value={education.graduationDate ?? ""}
             onChange={(e) => {
