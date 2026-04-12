@@ -3,6 +3,7 @@ import FormSection from "./FormSection";
 
 class Position {
   constructor() {
+    this.id = crypto.randomUUID();
     this.job_title = "";
     this.start_date = "";
     this.end_date = "";

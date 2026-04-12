@@ -1,11 +1,8 @@
 import { useState } from "react";
-import UserInfo from "./UserInfo";
 import UserInfoForm from "./UserInfoForm";
 import "./Form.css";
 import EducationInfoForm from "./EducationInfoForm";
-import EducationInfo from "./EducationInfo";
 import ExperienceInfoForm from "./ExperienceInfoForm";
-import ExperienceInfo from "./ExperienceInfo";
 
 function Form({
   userInfo,
