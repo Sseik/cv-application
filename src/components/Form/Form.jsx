@@ -31,15 +31,7 @@ function Form({
             hide={() => setUserFormVisible(false)}
           />
         ) : (
-          <>
-            <UserInfo
-              first_name={userInfo.first_name}
-              last_name={userInfo.last_name}
-              email={userInfo.email}
-              phone_number={userInfo.phone_number}
-            />
-            <button onClick={() => setUserFormVisible(true)}>Edit</button>
-          </>
+          <button onClick={() => setUserFormVisible(true)}>Edit</button>
         )}
       </section>
       <section className="educations">
@@ -51,10 +43,7 @@ function Form({
             hide={() => setEducationFormVisible(false)}
           />
         ) : (
-          <>
-            <EducationInfo educations={educations} />
-            <button onClick={() => setEducationFormVisible(true)}>Edit</button>
-          </>
+          <button onClick={() => setEducationFormVisible(true)}>Edit</button>
         )}
       </section>
       <section className="experience">
@@ -66,10 +55,7 @@ function Form({
             hide={() => setExperienceFormVisible(false)}
           />
         ) : (
-          <>
-            <ExperienceInfo experience={experience} />
-            <button onClick={() => setExperienceFormVisible(true)}>Edit</button>
-          </>
+          <button onClick={() => setExperienceFormVisible(true)}>Edit</button>
         )}
       </section>
     </section>
