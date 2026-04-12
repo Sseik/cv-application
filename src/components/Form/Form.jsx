@@ -33,10 +33,10 @@ function Form({
         ) : (
           <>
             <UserInfo
-              firstName={userInfo.firstName}
-              lastName={userInfo.lastName}
+              first_name={userInfo.first_name}
+              last_name={userInfo.last_name}
               email={userInfo.email}
-              phoneNumber={userInfo.phoneNumber}
+              phone_number={userInfo.phone_number}
             />
             <button onClick={() => setUserFormVisible(true)}>Edit</button>
           </>

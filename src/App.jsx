@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Form from "./components/Form/Form";
+import CV from "./components/CV/CV";
 import "./App.css";
 
 function App() {
   const [userInfo, setUserInfo] = useState({
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
-    phoneNumber: "",
+    phone_number: "",
   });
   const [educations, setEducations] = useState([]);
   const [experience, setExperience] = useState([]);
@@ -22,6 +23,7 @@ function App() {
         experience={experience}
         changeExperience={setExperience}
       ></Form>
+      <CV userInfo={userInfo} educations={educations} experience={experience} />
     </>
   );
 }

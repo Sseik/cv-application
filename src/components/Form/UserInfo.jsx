@@ -1,9 +1,9 @@
-function UserInfo({ firstName, lastName, email, phoneNumber }) {
+function UserInfo({ first_name, last_name, email, phone_number }) {
   return (
     <>
-      <div>Name: {firstName + " " + lastName}</div>
+      <div>Name: {first_name + " " + last_name}</div>
       <div>Email: {email}</div>
-      <div>Phone Number: {phoneNumber}</div>
+      <div>Phone Number: {phone_number}</div>
     </>
   );
 }

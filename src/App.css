@@ -16,3 +16,7 @@ button:hover {
 button:active {
   font-size: 0.9em;
 }
+
+.bold {
+  font-weight: 800;
+}
